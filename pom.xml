@@ -10,6 +10,8 @@
 
     <modules>
         <module>eureka-a</module>
+        <module>eureka-b</module>
+        <module>eureka-c</module>
     </modules>
 
 

@@ -1,14 +1,14 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: eurekaa
+    name: eurekab
 
 eureka:
   client:
     register-with-eureka: false  #表示是否将自己注册到 Eureka Server，默认为 true
     fetch-registry: false   #表示是否从 Eureka Server 获取注册信息，默认为 true
     service-url:
-      defaultZone: http://eurekab:8001/eureka/,http://eurekac:8002/eureka/
+      defaultZone: http://eurekaa:8000/eureka/,http://eurekac:8002/eureka/
   instance:
-    hostname: eurekaa
+    hostname: eurekab
