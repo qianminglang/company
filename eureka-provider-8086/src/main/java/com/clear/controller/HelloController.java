@@ -1,5 +1,6 @@
 package com.clear.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class HelloController {
+    @Value("${server.port}")
+    Integer port;
+
     @RequestMapping("/hello")
-    private String hell(String name) {
-        return "hello" + name;
+    public String hello(String name) {
+        return "hello "+name+":"+port;
     }
 }

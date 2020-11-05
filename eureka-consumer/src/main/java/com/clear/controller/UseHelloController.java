@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.net.URI;
 import java.util.List;
 
 /**
@@ -27,13 +26,16 @@ public class UseHelloController {
     @Resource
     private RestTemplate restTemplate;
 
+    int count = 0;
+
     @GetMapping("/hello")
     public String hello(String name) {
-        List<ServiceInstance> instances = discoveryClient.getInstances("provider");
-        ServiceInstance serviceInstance = instances.get(0);
-        URI uri = serviceInstance.getUri();
-        log.info("调用的地址是："+uri);
-        String result = restTemplate.getForObject(uri.toString() + "/hello?name={1}", String.class, name);
-        return result;
+        List<ServiceInstance> list = discoveryClient.getInstances("provider");
+        ServiceInstance instance = list.get(count % list.size());
+        count++;
+        String host = instance.getHost();
+        int port = instance.getPort();
+        String s = restTemplate.getForObject("http://" + host + ":" + port + "/hello?name={1}", String.class, name);
+        return s;
     }
 }
