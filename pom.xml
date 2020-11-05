@@ -12,6 +12,7 @@
         <module>eureka-a</module>
         <module>eureka-b</module>
         <module>eureka-c</module>
+        <module>consul-a</module>
     </modules>
 
 
@@ -23,6 +24,7 @@
         <java.version>1.8</java.version>
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencyManagement>
