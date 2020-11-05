@@ -9,6 +9,6 @@ eureka:
     register-with-eureka: false  #表示是否将自己注册到 Eureka Server，默认为 true
     fetch-registry: false   #表示是否从 Eureka Server 获取注册信息，默认为 true
     service-url:
-      defaultZone: http://eurekaa:8000/eureka/,http://eurekab:8001/eureka/
+      defaultZone: http://eurekaa:8080/eureka/,http://eurekab:8081/eureka/
   instance:
     hostname: eurekac

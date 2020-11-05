@@ -15,6 +15,9 @@
         <module>consul-provider-8083</module>
         <module>consul-provider-8084</module>
         <module>consul-consumer-8085</module>
+        <module>eureka-provider</module>
+        <module>eureka-consumer</module>
+        <module>RestTemplate</module>
     </modules>
 
 
@@ -27,6 +30,9 @@
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <eureka-server.version>2.1.1.RELEASE</eureka-server.version>
+        <eureka-client.version>2.2.5.RELEASE</eureka-client.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -48,12 +54,17 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-                <version>2.1.1.RELEASE</version>
+                <version>${eureka-server.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.12</version>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${eureka-client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

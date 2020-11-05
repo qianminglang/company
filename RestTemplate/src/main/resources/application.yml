@@ -1,0 +1,9 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: restTemplate
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaa:8081/eureka

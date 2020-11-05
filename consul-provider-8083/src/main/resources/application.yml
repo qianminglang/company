@@ -2,7 +2,7 @@ server:
   port: 8083
 spring:
   application:
-    name: consul-provider
+    name: consul provider 8083
   cloud:
     consul:
       host: localhost  #consul的地址和端口

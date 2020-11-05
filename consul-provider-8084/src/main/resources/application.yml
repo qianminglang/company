@@ -2,7 +2,7 @@ server:
   port: 8084
 spring:
   application:
-    name: consul provider
+    name: consul provider 8084
   cloud:
     consul:
       host: localhost
