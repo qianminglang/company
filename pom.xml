@@ -12,7 +12,9 @@
         <module>eureka-a</module>
         <module>eureka-b</module>
         <module>eureka-c</module>
-        <module>consul-a</module>
+        <module>consul-provider-8083</module>
+        <module>consul-provider-8084</module>
+        <module>consul-consumer-8085</module>
     </modules>
 
 
@@ -47,6 +49,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>2.1.1.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
