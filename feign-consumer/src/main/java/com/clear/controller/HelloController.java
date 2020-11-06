@@ -1,7 +1,7 @@
 package com.clear.controller;
 
 import com.clear.dto.input.User;
-import com.clear.service.HelloService;
+import com.clear.service.FeignHelloService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -16,30 +16,30 @@ import javax.annotation.Resource;
 @RestController
 public class HelloController {
     @Resource
-    private HelloService helloService;
+    private FeignHelloService feignHelloService;
 
     @GetMapping("/hello")
-    private String hello(String name) {
-        return helloService.hello(name);
+    public String hello(String name) {
+        return feignHelloService.hello(name);
     }
 
     @DeleteMapping("/delete/{id}")
-    private void delete(@PathVariable Long id) {
-        helloService.delete(id);
+    public void delete(@PathVariable Long id) {
+        feignHelloService.delete(id);
     }
 
     @GetMapping("/getUser")
-    private User getUser(String name) {
-        return helloService.getUser(name);
+    public User getUser(String name) {
+        return feignHelloService.getUser(name);
     }
 
     @GetMapping("/addUser")
-    private User addUser(@RequestBody User user) {
-        return helloService.addUser(user);
+    public User addUser(@RequestBody User user) {
+        return feignHelloService.addUser(user);
     }
 
     @GetMapping("/updateUserById")
-    private void updateUserById(@RequestHeader String name, @RequestHeader Long id) {
-        helloService.updateUserById(name, id);
+    public void updateUserById(@RequestHeader String name, @RequestHeader Long id) {
+        feignHelloService.updateUserById(name, id);
     }
 }
