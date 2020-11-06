@@ -7,3 +7,24 @@ eureka:
   client:
     service-url:
       defaultZone: http://eurekab:8081/eureka/
+
+#这里 logging.level 是指日志级别的前缀，com.clear.service.FeignHelloService 表示该 class 以 debug 级别输出日志。
+#当然，类路径也可以是一个 package ，这样就表示该 package 下的所有 class 以 debug 级别输出日志。配置完成
+logging:
+  level:
+    com:
+      clear:
+        service:
+          FeignHelloService: debug
+
+#前两行表示开启请求和响应压缩，第三行表示压缩的数据类型，默认是 text/html,application/json,application/xml ，
+#第四行表示压缩数据的下限，即当要传输的数据大于2048时才需要对请求进行压缩。
+feign:
+  compression:
+    request:
+      enabled: true
+      min-request-size: 2048
+      mime-types: text/html,application/json
+    response:
+      enabled: true
+
