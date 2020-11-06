@@ -2,6 +2,7 @@ package com.clear;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,7 +20,8 @@ public class EurekaConsumer8087 {
     }
 
     @Bean
-    RestTemplate restTemplate() {
+    @LoadBalanced
+    RestTemplate loadBalancer() {
         return new RestTemplate();
     }
 }

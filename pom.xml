@@ -19,6 +19,8 @@
         <module>eureka-provider-8089</module>
         <module>eureka-consumer</module>
         <module>RestTemplate</module>
+        <module>feign-consumer</module>
+        <module>commons</module>
     </modules>
 
 
