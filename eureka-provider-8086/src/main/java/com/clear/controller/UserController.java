@@ -22,6 +22,7 @@ public class UserController implements HelloService {
 
     @Override
     public String hello(String name) {
+        log.info("调用机器："+port);
         return "hello " + name + ":" + port;
     }
 

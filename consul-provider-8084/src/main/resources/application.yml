@@ -7,3 +7,6 @@ spring:
     consul:
       host: localhost
       port: 8500
+logging:
+  level:
+    com.netflix: debug
