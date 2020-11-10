@@ -24,3 +24,18 @@ resilience4j.retry:
         - java.io.IOException
       ignoreExceptions:
         - com.clear.exception.IgnoredException
+
+management:
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true

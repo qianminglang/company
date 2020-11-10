@@ -1,6 +1,5 @@
 package com.clear.service;
 
-import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -10,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
  * @Date 2019/4/8 20:08
  */
 @Service
-@Retry(name = "retryBackendA")
+//@Retry(name = "retryBackendA")
 public class HelloService {
     @Autowired
     RestTemplate restTemplate;
