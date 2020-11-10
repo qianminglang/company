@@ -2,7 +2,7 @@ server:
   port: 8091
 spring:
   application:
-    name: resilience-consumer
+    name: qml
 eureka:
   client:
     service-url:

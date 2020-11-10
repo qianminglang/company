@@ -1,0 +1,27 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: gateWay
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-9001.com:9001/eureka
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+#gateway
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: path_route
+#          uri: http://httpbin.org
+#          predicates:
+#            - Path=/get
