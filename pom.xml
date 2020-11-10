@@ -21,6 +21,7 @@
         <module>RestTemplate</module>
         <module>feign-consumer</module>
         <module>commons</module>
+        <module>Resilience4j</module>
     </modules>
 
 
@@ -30,11 +31,11 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <eureka-server.version>2.1.1.RELEASE</eureka-server.version>
-        <eureka-client.version>2.2.5.RELEASE</eureka-client.version>
+        <eureka-client.version>2.1.1.RELEASE</eureka-client.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>
 

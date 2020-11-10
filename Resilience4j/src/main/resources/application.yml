@@ -1,0 +1,26 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: resilience-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://lpf:root@eureka-9001.com:9001/eureka
+
+resilience4j.retry:
+  retryAspectOrder: 399
+  backends:
+    retryBackendA:
+      maxRetryAttempts: 3
+      waitDuration: 600
+      eventConsumerBufferSize: 1
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      enableRandomizedWait: false
+      randomizedWaitFactor: 2
+      retryExceptionPredicate: com.clear.exception.RecordFailurePredicate
+      retryExceptions:
+        - java.io.IOException
+      ignoreExceptions:
+        - com.clear.exception.IgnoredException

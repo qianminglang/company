@@ -1,14 +1,19 @@
-server:
-  port: 8080
 spring:
   application:
-    name: eurekaa
+    name: eureka-server
+  security:
+    user:
+      name: lpf
+      password: root
+
+server.port: 9001
 
 eureka:
-  client:
-    register-with-eureka: false  #表示是否将自己注册到 Eureka Server，默认为 true
-    fetch-registry: false   #表示是否从 Eureka Server 获取注册信息，默认为 true
-    service-url:
-      defaultZone: http://eurekab:8081/eureka/,http://eurekac:8082/eureka/
   instance:
-    hostname: eurekaa
+    hostname: eureka-9001.com
+    instance-id: eureka-9001
+  client:
+    service-url:
+      defaultZone: http://lpf:root@eureka-9002.com:9002/eureka,http://lpf:root@eureka-9003.com:9003/eureka
+
+logging.level.root: info
