@@ -23,6 +23,7 @@
         <module>commons</module>
         <module>Resilience4j</module>
         <module>gateWay</module>
+        <module>configServer</module>
     </modules>
 
 
