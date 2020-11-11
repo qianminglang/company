@@ -2,19 +2,17 @@ package com.clear;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * ClassName ConfigServerApplication
+ * ClassName ConfigClientApplication8094
  *
  * @author qml
- * Date 2020/11/11 9:49
+ * Date 2020/11/11 11:36
  * Version 1.0
  **/
 @SpringBootApplication
-@EnableConfigServer
-public class ConfigServerApplication {
+public class ConfigClientApplication8094 {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerApplication.class, args);
+        SpringApplication.run(ConfigClientApplication8094.class, args);
     }
 }

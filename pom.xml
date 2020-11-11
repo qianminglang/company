@@ -24,6 +24,7 @@
         <module>Resilience4j</module>
         <module>gateWay</module>
         <module>configServer</module>
+        <module>configClient</module>
     </modules>
 
 

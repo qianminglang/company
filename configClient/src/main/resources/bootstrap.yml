@@ -1,0 +1,10 @@
+server:
+  port: 8094
+spring:
+  application:
+    name: client1
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:8093/
