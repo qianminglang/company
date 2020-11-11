@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  **/
 public interface HelloService {
     @GetMapping("/hello")
-    String hello(@RequestParam("name") String name);
+    String hello(@RequestParam("name") String name,@RequestParam("fool") String fool);
 
     @DeleteMapping("/delete/{id}")
     void delete(@PathVariable("id") Long id);

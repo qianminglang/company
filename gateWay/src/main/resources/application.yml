@@ -8,6 +8,17 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: path_route
+          uri: lb://provider
+          filters:
+            - AddRequestParameter=fool, bar
+          predicates:
+#            - After=2018-04-22T06:06:06+08:00[Asia/Shanghai]
+#            - Before=2018-04-22T06:06:06+08:00[Asia/Shanghai]
+#            - Between=2018-04-22T06:06:06+08:00[Asia/Shanghai], 2019-04-22T06:06:06+08:00[Asia/Shanghai]
+            - Method=GET
+#             - Path=/fool/{segment}
 eureka:
   client:
     service-url:

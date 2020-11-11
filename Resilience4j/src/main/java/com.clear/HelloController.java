@@ -24,18 +24,18 @@ public class HelloController {
     HelloService helloService;
 
     @GetMapping("/hello")
-    public String hello(String name) {
-        return helloService.hello(name);
+    public String hello(String name,String fool) {
+        return helloService.hello(name,fool);
     }
 
     @GetMapping("/hello2")
-    public String hello2(String name) {
+    public String hello2(String name,String fool) {
         RetryConfig config = RetryConfig.custom()
                 .maxAttempts(3)
                 .waitDuration(Duration.ofMillis(5000))
                 .build();
         Retry retry = Retry.of("id", config);
-        Try<String> result = Try.ofSupplier(Retry.decorateSupplier(retry, () -> helloService.hello(name)));
+        Try<String> result = Try.ofSupplier(Retry.decorateSupplier(retry, () -> helloService.hello(name,fool)));
         return result.get();
     }
 }
