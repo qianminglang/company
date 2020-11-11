@@ -7,5 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/qianminglang/spring-cloud.git
-          search-paths: cloudConfig/client1
+          uri: https://github.com/qianminglang/cloudConfig.git
+          search-paths: client1
+          username: qianminglang
+          password:
