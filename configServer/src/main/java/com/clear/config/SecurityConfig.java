@@ -24,6 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      **/
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //加此config可以在postman中通过设置Basic Auth来跳过验证spring security
         http.authorizeRequests().anyRequest().authenticated()
                 .and()
                 .httpBasic()
