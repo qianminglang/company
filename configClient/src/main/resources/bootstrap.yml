@@ -5,13 +5,18 @@ spring:
     name: client1
   cloud:
     config:
-      username: clear
-      password: clear
+#      username: clear
+#      password: clear
       profile: dev
       label: master
       discovery:
         service-id: config-server
         enabled: true
+      fail-fast: true
+      retry:
+        initial-interval: 1000
+        multiplier: 1.1
+        max-interval: 2000
 
 #      uri: http://localhost:8093/
 eureka:
