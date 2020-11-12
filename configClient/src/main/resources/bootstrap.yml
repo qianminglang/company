@@ -5,8 +5,8 @@ spring:
     name: client1
   cloud:
     config:
-#      username: clear
-#      password: clear
+      username: clear
+      password: clear
       profile: dev
       label: master
       discovery:
