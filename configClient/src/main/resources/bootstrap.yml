@@ -17,14 +17,15 @@ spring:
         initial-interval: 1000
         multiplier: 1.1
         max-interval: 2000
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #      uri: http://localhost:8093/
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-9001.com:9001/eureka
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: refresh
+

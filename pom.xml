@@ -25,6 +25,7 @@
         <module>gateWay</module>
         <module>configServer</module>
         <module>configClient</module>
+        <module>rabbit-mq</module>
     </modules>
 
 

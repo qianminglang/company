@@ -15,6 +15,11 @@ spring:
     user:
       password: clear
       name: clear
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 #对称加密
 #encrypt:
 #  key: hdnspace12334566
@@ -31,3 +36,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-9001.com:9001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
