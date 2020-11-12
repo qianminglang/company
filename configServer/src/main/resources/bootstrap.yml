@@ -27,3 +27,7 @@ encrypt:
     password: 1qaz!QAZ
     secret: 1qaz!QAZ
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-9001.com:9001/eureka

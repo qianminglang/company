@@ -9,4 +9,17 @@ spring:
       password: clear
       profile: dev
       label: master
-      uri: http://localhost:8093/
+      discovery:
+        service-id: config-server
+        enabled: true
+
+#      uri: http://localhost:8093/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-9001.com:9001/eureka
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh

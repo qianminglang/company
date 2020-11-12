@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Version 1.0
  **/
 @RestController
+//@RefreshScope
 public class HelloController {
     @Value("${javaboy}")
     private String hello;
