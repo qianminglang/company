@@ -11,3 +11,14 @@ spring:
           search-paths: client1
           username: qianminglang
           password:
+#对称加密
+#encrypt:
+#  key: hdnspace12334566
+
+#非对称加密
+encrypt:
+  key-store:
+    location: cloud-server.keystore
+    alias: cloud-server
+    password: 1qaz!QAZ
+    secret: 1qaz!QAZ
