@@ -28,6 +28,7 @@
         <module>rabbit-mq</module>
         <module>cloud-stream</module>
         <module>cloud-stream-practice</module>
+        <module>spring-cloud-sleuth</module>
     </modules>
 
 
