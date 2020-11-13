@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        mychannel-input:
+          consumer:
+            partitioned: true
+          destination: clear-topic
+          group: g1
+        mychannel-output:
+          destination: clear-topic
+          group: g1
+          producer:
+            partition_key_expression: payload.partitionKey
+            partitionCount: 2
+      instance-count: 2
+      instance-index: 0
+  rabbitmq:
+    host: 127.0.0.1
+    password: guest
+    port: 5672
+    username: guest

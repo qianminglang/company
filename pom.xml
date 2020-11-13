@@ -26,6 +26,7 @@
         <module>configServer</module>
         <module>configClient</module>
         <module>rabbit-mq</module>
+        <module>cloud-stream</module>
     </modules>
 
 
