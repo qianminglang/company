@@ -33,6 +33,8 @@
         <module>zipkin-consumer</module>
         <module>spring-boot-admin-server</module>
         <module>spring-boot-admin-client</module>
+        <module>nacos</module>
+        <module>nacos-consumer</module>
     </modules>
 
 
