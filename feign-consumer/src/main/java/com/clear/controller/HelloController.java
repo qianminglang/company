@@ -20,7 +20,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(String name) {
-        return feignHelloService.hello(name);
+        return feignHelloService.hello(name, null);
     }
 
     @DeleteMapping("/delete/{id}")
