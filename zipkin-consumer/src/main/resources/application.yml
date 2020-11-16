@@ -1,0 +1,20 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: zipkin-consumer
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1
+
+  zipkin:
+    enabled: true
+    sender:
+      type: rabbit
+    base-url: https://localhost:9411
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: guest
+    password: guest
