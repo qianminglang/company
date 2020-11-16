@@ -31,6 +31,8 @@
         <module>spring-cloud-sleuth</module>
         <module>zipkin-provider</module>
         <module>zipkin-consumer</module>
+        <module>spring-boot-admin-server</module>
+        <module>spring-boot-admin-client</module>
     </modules>
 
 
