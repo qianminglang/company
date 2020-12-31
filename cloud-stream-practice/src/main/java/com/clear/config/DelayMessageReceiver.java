@@ -1,4 +1,4 @@
-package com.clear.receiver;
+package com.clear.config;
 
 import com.clear.rabbit.DelayChannel;
 import org.springframework.cloud.stream.annotation.EnableBinding;
