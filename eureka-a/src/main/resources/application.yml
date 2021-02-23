@@ -14,6 +14,6 @@ eureka:
     instance-id: eureka-9001
   client:
     service-url:
-      defaultZone: http://lpf:root@eureka-9002.com:9002/eureka,http://lpf:root@eureka-9003.com:9003/eureka
+      defaultZone: http://eureka-9002.com:9002/eureka,http://eureka-9003.com:9003/eureka
 
 logging.level.root: info

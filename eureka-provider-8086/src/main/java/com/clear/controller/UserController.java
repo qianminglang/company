@@ -35,7 +35,7 @@ public class UserController implements HelloService {
     @Override
     public User getUser(@RequestParam String name) {
         User user = new User();
-        user.setUsername(name);
+        user.setUserName(name);
         return user;
     }
 

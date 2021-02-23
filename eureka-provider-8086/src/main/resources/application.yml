@@ -6,4 +6,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://lpf:root@eureka-9001.com:9001/eureka
+      defaultZone: http://eureka-9001.com:9001/eureka
